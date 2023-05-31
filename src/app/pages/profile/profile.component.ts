@@ -22,16 +22,9 @@ export class ProfileComponent {
     );
   }
 
-  onSubmit() {
+  CargarUser(_name : string, _last_name: string, _email: string, _photo: string) {
     console.log(this.user);
-    const newUser = new User(
-      1,
-      this.user.name,
-      this.user.last_name,
-      this.user.email,
-      this.user.photo,
-      this.user.password
-    );
+    const newUser = new User(this.user.id_user,_name,_last_name,_email, _photo,this.user.password);
     console.log(newUser);
     this.user = newUser;
   }

@@ -12,20 +12,22 @@
 
   <div class="form-container">
     <h2>Modificar Datos Profanos</h2>
-    <form (submit)="onSubmit()">
+    <form>
       <label>Nombre Oscuro</label>
-      <input type="text" [value]="user.name">
+      <input type="text" #InputName placeholder="Nombre Oscuro">
 
       <label>Apellidos Insondables</label>
-      <input type="text" [value]="user.last_name">
+      <input type="text" #InputLast_name placeholder="Apellido Insondables">
 
       <label>Correo Prohibido</label>
-      <input type="text" [value]="user.email">
+      <input type="text" #InputEmail placeholder="Correo prohibido">
 
       <label>URL Abominable</label>
-      <input type="text" [value]="user.photo">
+      <input type="text" #InputPhoto  placeholder="https://fotoprimeracomunion.png">
 
-      <button type="submit">Modifica si te atreves</button>
+      <button on-click=CargarUser(InputName.value,InputLast_name.value,InputEmail.value,InputPhoto.value)>
+        Modifica si te atreves
+      </button>
     </form>
   </div>
 </div>

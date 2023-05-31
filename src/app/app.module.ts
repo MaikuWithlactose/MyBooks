@@ -11,6 +11,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { BooksComponent } from './pages/books/books.component';
 import { CardComponent } from './component/card/card.component';
+import { FormBookComponent } from './component/form-book/form-book.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CardComponent } from './component/card/card.component';
     HomeComponent,
     ProfileComponent,
     BooksComponent,
-    CardComponent
+    CardComponent,
+    FormBookComponent
   ],
   imports: [
     BrowserModule,

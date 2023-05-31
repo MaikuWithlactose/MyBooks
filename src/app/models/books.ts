@@ -17,6 +17,6 @@ export class Books
         this.price=price;
         this.photo=photo;
         this.id_book=id_book;
-        this.id_user=id_user
-    }
+        this.id_user=id_user;
+     }
 }
