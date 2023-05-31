@@ -16,7 +16,7 @@ export class FormBookComponent {
     newBook = new Books(_title, _type, _author, parseFloat(_price), _photo, parseFloat(_id_book));
     this.enviarBook.emit(newBook);
   }
-
+  
 
   soloNumeros(event: any) {
     const input = event.target as HTMLInputElement;
