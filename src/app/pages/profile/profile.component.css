@@ -1,65 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .profile-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .profile-info img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
-  .profile-info h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .profile-info p {
-    margin-bottom: 5px;
-  }
-  
-  .form-container {
-    margin-top: 30px;
-  }
-  
-  .form-container h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .form-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-container label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .form-container input {
-    margin-bottom: 10px;
-    padding: 5px;
-  }
-  
-  .form-container button {
-    padding: 10px 20px;
-    background-color: #c00;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+  font-family: 'Cinzel Decorative', bold;
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+}
+
+.Condenado-container {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.profile-info img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #0e3a03;
+  box-shadow: 0 0 20px rgba(216, 219, 216, 0.5);
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-info .profile-details {
+  margin-left: 20px;
+}
+
+.profile-info h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  margin-bottom: 5px;
+}
+
+.profile-info img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.form-container {
+  margin-top: 30px;
+}
+
+.form-container h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.form-container button {
+  font-family: 'Cinzel Decorative';
+  padding: 10px 20px;
+  background-color: rgb(10, 126, 81);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

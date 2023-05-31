@@ -1,0 +1,8 @@
+<div class="card">
+    <img [src]="book.photo" alt="Foto del libro">
+    <div class="card-details">
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.author }}</p>
+      <p>Precio: {{ book.price | currency }}</p>
+    </div>
+  </div>

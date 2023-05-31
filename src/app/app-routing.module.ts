@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './component/header/header.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { FormRegisterComponent } from './component/register/form-register.component';
+
 import { ProfileComponent } from './pages/profile/profile.component';
+import { HomeComponent } from './pages/home/home.component';
+import { BooksComponent } from './pages/books/books.component';
+
+import { FormRegisterComponent } from './component/register/form-register.component';
+import { CardComponent } from './component/card/card.component';
 
 
 const routes: Routes = [
-  { path: "header", component: HeaderComponent},
-  { path: "footer", component: FooterComponent},
+  {path: '', component: HomeComponent},
   { path: "register", component: FormRegisterComponent },
   { path: "profile", component: ProfileComponent },
-
+  { path: 'books', component: BooksComponent }, 
+  { path: 'card', component: CardComponent }, 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule { }
