@@ -93,3 +93,7 @@
 .card-details-v2 button:hover {
   background-color: #000000;
 }
+
+.refCode{
+  font-weight: bold;
+}
