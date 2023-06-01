@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { BooksComponent } from './pages/books/books.component';
 import { CardComponent } from './component/card/card.component';
 import { FormBookComponent } from './component/form-book/form-book.component';
+import { BookCodePipe } from './book-code.pipe';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormBookComponent } from './component/form-book/form-book.component';
     ProfileComponent,
     BooksComponent,
     CardComponent,
-    FormBookComponent
+    FormBookComponent,
+    BookCodePipe
   ],
   imports: [
     BrowserModule,

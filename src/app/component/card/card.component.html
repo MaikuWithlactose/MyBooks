@@ -6,6 +6,8 @@
         <h2>{{ book.title }}</h2>
         <p>{{ book.author }}</p>
         <p>Precio: {{ book.price | currency }}</p>
+        <p>Precio: {{ book.id_book | bookCode }}</p>
+        
         <hr>
         <div [ngClass]="book.id_book%2==0 ? 'card-details' : 'card-details-v2' ">
             <button (click)="deleteCard()">X</button>
