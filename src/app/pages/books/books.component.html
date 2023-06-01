@@ -1,16 +1,16 @@
 <div class="parallax">
     <div class="parallax-content">
-    <h1>Biblioteca Inexpugnable</h1>
-    <div class="rowCards" *ngIf="books.length !== 0;else listaVacia">
-        <div *ngFor="let book of books">
-            <app-card class="formatCard" [book]="book" (delete)="removeCard($event)"></app-card>
+        <h1>Biblioteca Inexpugnable</h1>
+        <div class="rowCards" *ngIf="books.length !== 0;else listaVacia">
+            <div *ngFor="let book of books">
+                <app-card class="formatCard" [book]="book" (delete)="removeCard($event)"></app-card>
+            </div>
         </div>
+        <ng-template #listaVacia>
+            <span class="textoAviso"> No hay libros que mostrar</span>
+        </ng-template>
     </div>
-    <ng-template #listaVacia>
-        <span class="textoAviso"> No hay libros que mostrar</span>
-    </ng-template>
 </div>
-</div>
-<div>
+<!-- <div>
     <app-form-book (enviarBook)="CargarBook($event)"></app-form-book>
-</div>
+</div> -->
