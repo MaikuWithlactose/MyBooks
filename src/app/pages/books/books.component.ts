@@ -9,8 +9,8 @@ import { Books } from 'src/app/models/books';
 
 export class BooksComponent {
   books: Books[] = [
-    new Books('Capitan Calzoncillos', 'Literatura Clásica', 'Guillermo del Toro', 10.99, 'photo1.jpg', 1,1),
-    new Books('¡Pom Pom Pompibol!', 'Comedia', 'Pepe Villuela', 19.99, 'photo2.jpg', 2,1)]
+    new Books('Capitan Calzoncillos', 'Literatura Clásica', 'Guillermo del Toro', 10.99, 'https://m.media-amazon.com/images/I/41gWxcomr2L.jpg', 1,1),
+    new Books('¡Pom Pom Pompibol!', 'Comedia', 'Pepe Villuela', 19.99, 'https://66.media.tumblr.com/51a249d97bcf89b1acb44ba341615e8d/tumblr_inline_nu077pdd631s0669x_540.jpg', 2,1)]
   
   // books: Books[] = []
 

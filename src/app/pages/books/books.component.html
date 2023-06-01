@@ -1,16 +1,15 @@
-<div>
-    <h1>Biblioteca Inexpugnable</h1>
-    <div *ngIf="books.length !== 0;else listaVacia">
-        <div *ngFor="let book of books">
-            <app-card [book]="book"></app-card>
+<div class="parallax">
+    <div class="parallax-content">
+        <h1>Biblioteca Inexpugnable</h1>
+        <div *ngIf="books.length !== 0;else listaVacia">
+            <div *ngFor="let book of books">
+                <app-card [book]="book"></app-card>
+            </div>
         </div>
+        <ng-template #listaVacia>
+            <span class="textoAviso"> No hay libros que mostrar</span>
+        </ng-template>
     </div>
-    <ng-template #listaVacia>
-        <span class="textoAviso"> No hay libros que mostrar</span>
-    </ng-template>
-    <!-- <div *ngIf="books.length === 0">
-       
-    </div> -->
 </div>
 <div>
     <app-form-book (enviarBook)="CargarBook($event)"></app-form-book>
