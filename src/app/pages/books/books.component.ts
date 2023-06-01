@@ -9,16 +9,21 @@ import { Books } from 'src/app/models/books';
 
 export class BooksComponent {
   books: Books[] = [
-    new Books('Capitan Calzoncillos', 'Literatura Clásica', 'Guillermo del Toro', 10.99, 'https://m.media-amazon.com/images/I/41gWxcomr2L.jpg', 1,1),
-    new Books('¡Pom Pom Pompibol!', 'Comedia', 'Pepe Villuela', 19.99, 'https://66.media.tumblr.com/51a249d97bcf89b1acb44ba341615e8d/tumblr_inline_nu077pdd631s0669x_540.jpg', 2,1)]
-  
-  // books: Books[] = []
+    new Books('El horror de Dunwich', 'Horror', 'H.P. Lovecraft', 12.99, 'https://example.com/lovecraft1.jpg', 3, 2),
+    new Books('Las montañas de la locura', 'Comedia', 'Pepe Villuela', 19.99, 'photo2.jpg', 2,1),
+    new Books('Los mitos de Cthulhu', 'Horror', 'H.P. Lovecraft', 16.99, 'https://example.com/lovecraft3.jpg', 5, 2),
+   // new Books('El llamado de Cthulhu', 'Horror', 'H.P. Lovecraft', 15.99, 'https://example.com/lovecraft6.jpg', 8, 4),
+   // new Books('El caso de Charles Dexter Ward', 'Horror', 'H.P. Lovecraft', 11.99, 'https://example.com/lovecraft4.jpg', 6, 4),
 
-  // CargarBook(_title:string, _type:string, _author:string, _price:number, _photo:string, _id_book:number=0, )
-  // {
-  //   this.books.push(new Books(_title, _type, _author, _price, _photo, _id_book))
-  //   console.log("Libro añadido correctamente - "+ _title)
-  // }
+  ]
+  
+
+  removeCard(book: Books) {
+    const index = this.books.indexOf(book);
+    if (index !== -1) {
+      this.books.splice(index, 1);
+    }
+  }
 
   CargarBook(_book: Books)
   {

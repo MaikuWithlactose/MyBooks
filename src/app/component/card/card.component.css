@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
-
 .card-container {
   display: flex;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-content: flex-start; 
+  margin: -20px;
 }
 
 .card {
+  flex: 0 0 calc(50% - 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: calc(50% - 40px);
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
@@ -22,7 +22,12 @@
   background-image: url('https://thumbs.dreamstime.com/b/blank-old-book-cover-illustration-61105642.jpg');
   background-size: cover;
   font-family: 'Cinzel Decorative', bold;
+}
 
+@media screen and (max-width: 767px) {
+  .card {
+    flex: 0 0 100%;
+  }
 }
 
 .card:hover {
@@ -65,8 +70,6 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Cinzel Decorative', serif;
-
 }
 
 .card-details button:hover {
