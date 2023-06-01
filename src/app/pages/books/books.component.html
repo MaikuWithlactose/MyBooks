@@ -1,9 +1,9 @@
 <div class="parallax">
     <div class="parallax-content">
     <h1>Biblioteca Inexpugnable</h1>
-    <div *ngIf="books.length !== 0;else listaVacia">
+    <div class="rowCards" *ngIf="books.length !== 0;else listaVacia">
         <div *ngFor="let book of books">
-            <app-card [book]="book" (delete)="removeCard($event)"></app-card>
+            <app-card class="formatCard" [book]="book" (delete)="removeCard($event)"></app-card>
         </div>
     </div>
     <ng-template #listaVacia>
