@@ -21,7 +21,6 @@
   overflow: hidden;
   background-image: url('https://thumbs.dreamstime.com/b/blank-old-book-cover-illustration-61105642.jpg');
   background-size: cover;
-  font-family: 'Cinzel Decorative', bold;
 }
 
 @media screen and (max-width: 767px) {

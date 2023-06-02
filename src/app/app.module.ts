@@ -13,7 +13,12 @@ import { BooksComponent } from './pages/books/books.component';
 import { CardComponent } from './component/card/card.component';
 import { FormBookComponent } from './component/form-book/form-book.component';
 import { BookCodePipe } from './book-code.pipe';
-import { AddBooksComponent } from './pages/add-books/add-books.component';
+import { AddBooksComponent } from './pages/addbooks/add-books.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormLoginComponent } from './form-login/form-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 
 @NgModule({
@@ -27,13 +32,19 @@ import { AddBooksComponent } from './pages/add-books/add-books.component';
     BooksComponent,
     CardComponent,
     FormBookComponent,
-    AddBooksComponent,
+    AddBooksComponent,    
+    UpdateBookComponent,
     BookCodePipe,
+    LoginComponent,
+    FormLoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

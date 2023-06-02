@@ -24,10 +24,12 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"     
+            ],
             "styles": [
               "src/styles.css"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {

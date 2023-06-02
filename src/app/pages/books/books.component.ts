@@ -17,7 +17,6 @@ export class BooksComponent {
 
   ]
 
-
   removeCard(book: Books) {
     const index = this.books.indexOf(book);
     if (index !== -1) {
