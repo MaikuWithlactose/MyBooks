@@ -1,3 +1,6 @@
+<header>
+
+<div class="container">
 <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
     <div class="form-group">
       <label for="email">Correo</label>
@@ -13,4 +16,6 @@
   
     <button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
   </form>
-  
+</div>
+
+</header>

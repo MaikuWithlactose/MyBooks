@@ -1,23 +1,23 @@
 
 <div>
   <form>
-      <label>Título Macabro</label>
-      <input type="text" #InputTitle placeholder="Título Macabro">
+      <label>Título Macabro Update</label>
+      <input type="text" #InputTitle placeholder="Título Macabro Update">
   
-      <label>Tipo de Lectura</label>
-      <input type="text" #InputType placeholder="Tipo de lectura">
+      <label>Tipo de Lectura Update</label>
+      <input type="text" #InputType placeholder="Tipo de lectura Update">
   
-      <label>Autor Maldecido</label>
-      <input type="text" #InputAuthor placeholder="Autor Maldecido">
+      <label>Autor Maldecido Update</label>
+      <input type="text" #InputAuthor placeholder="Autor Maldecido Update">
   
-      <label>Precio Malevodo </label>
-      <input type="number" #InputPrice  (input)="soloNumeros($event)" placeholder="Precio Malevodo">
+      <label>Precio Malevodo Update </label>
+      <input type="number" #InputPrice  (input)="soloNumeros($event)" placeholder="Precio Malevodo Update">
   
-      <label>URL Abominable</label>
+      <label>URL Abominable Update</label>
       <input type="text" #InputPhoto placeholder="https://fotoprimeracomunion.png">
   
-      <label>Código secreto</label>
-      <input type="number" #InputId_book (input)="soloNumeros($event)" placeholder="Código secreto">
+      <label>Código secreto Update</label>
+      <input type="number" #InputId_book (input)="soloNumeros($event)" placeholder="Código secreto Update">
   
       <button on-click=rellenarFormulario(InputTitle.value,InputType.value,InputAuthor.value,InputPrice.value,InputPhoto.value,InputId_book.value)>Agrega una nueva aberración
       </button>
