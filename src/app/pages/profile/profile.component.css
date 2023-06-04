@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
+header {
   font-family: 'Cinzel Decorative', bold;
   background-color: #000;
-  color: #fff;
+  color: #ffffff;
   padding: 40px;
   margin-top: 30px;
   height: 100vh;

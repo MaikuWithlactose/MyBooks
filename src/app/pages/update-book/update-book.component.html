@@ -1,30 +1,46 @@
-<div>
-  <span class="titleList">
-    <label>Listado de libros </label>
-  </span>
-  <span *ngFor="let book of updatingBooks">
-    {{book.id}} - {{book.title}}
-  </span>
-  <form>
-    <label>Título Macabro Update</label>
-    <input type="text" #InputTitle placeholder="Título Macabro Update">
+<div class="container">
+  <div class="titleList">
+    <label>Listado de libros</label>
+  </div>
 
-    <label>Tipo de Lectura Update</label>
-    <input type="text" #InputType placeholder="Tipo de lectura Update">
+  <div class="listContainer">
+    <div class="book-item" *ngFor="let book of updatingBooks">
+      ID/Título:
+      {{book.id}} - {{book.title}}
+    </div>
+  </div>
+  <form class="formContainer">
 
-    <label>Autor Maldecido Update</label>
-    <input type="text" #InputAuthor placeholder="Autor Maldecido Update">
+    <li>
+      <label>Título Macabro Update</label>
+      <input type="text" #InputTitle placeholder="Título Macabro Update">
+    </li>
 
-    <label>Precio Malevodo Update </label>
-    <input type="number" #InputPrice (input)="soloNumeros($event)" placeholder="Precio Malevodo Update">
+    <li>
+      <label>Tipo de Lectura Update</label>
+      <input type="text" #InputType placeholder="Tipo de lectura Update">
+    </li>
 
-    <label>URL Abominable Update</label>
-    <input type="text" #InputPhoto placeholder="https://fotoprimeracomunion.png">
+    <li>
+      <label>Autor Maldecido Update</label>
+      <input type="text" #InputAuthor placeholder="Autor Maldecido Update">
+    </li>
+    <li>
+      <label>Precio Malevodo Update </label>
+      <input type="number" #InputPrice (input)="soloNumeros($event)" placeholder="Precio Malevodo Update">
+    </li>
 
-    <label>Código secreto Update</label>
-    <input type="number" #InputId_book (input)="soloNumeros($event)" placeholder="Código secreto Update">
+    <li>
+      <label>URL Abominable Update</label>
+      <input type="text" #InputPhoto placeholder="https://fotoprimeracomunion.png">
+    </li>
 
-    <button
+    <li>
+      <label>Código secreto Update</label>
+      <input type="number" #InputId_book (input)="soloNumeros($event)" placeholder="Código secreto Update">
+    </li>
+
+    <button class="centered-button"
       on-click=rellenarFormulario(InputTitle.value,InputType.value,InputAuthor.value,InputPrice.value,InputPhoto.value,InputId_book.value)>Edita
       la aberración
     </button>
