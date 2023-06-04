@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { find } from 'rxjs';
 import { Books } from 'src/app/models/books';
+import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
   selector: 'app-books',
@@ -8,26 +11,60 @@ import { Books } from 'src/app/models/books';
 })
 
 export class BooksComponent {
-  books: Books[] = [
-    new Books('El horror de Dunwich', 'Horror', 'H.P. Lovecraft', 12.99, 'https://www.readandcobooks.co.uk/wp-content/uploads/dunwich-horror-lovecraft-9781447468554-cover-288x445.jpg', 3, 2),
-    new Books('Las montañas de la locura', 'Comedia', 'Pepe Villuela', 19.99, 'https://www.readandcobooks.co.uk/wp-content/uploads/at-mountains-of-madness-lovecraft-9781447468806-cover-288x445.jpg', 2, 1),
-    new Books('Los mitos de Cthulhu', 'Horror', 'H.P. Lovecraft', 16.99, 'https://www.readandcobooks.co.uk/wp-content/uploads/tales-in-cthulhu-mythos-lovecraft-9781447468912-cover-288x445.jpg', 5, 2),
-    new Books('El llamado de Cthulhu', 'Horror', 'H.P. Lovecraft', 15.99, 'https://www.readandcobooks.co.uk/wp-content/uploads/call-of-cthulhu-lovecraft-9781447418320-cover-288x445.jpg', 8, 4),
-    new Books('El caso de Charles Dexter Ward', 'Horror', 'H.P. Lovecraft', 11.99, 'https://www.readandcobooks.co.uk/wp-content/uploads/outsider-lovecraft-9781528717175-cover-288x445.jpg', 6, 4),
+  localbooks: Books[] = [ ]
 
-  ]
+  constructor (public booksService:BooksService, public toast:ToastrService){
+    this.localbooks = this.booksService.getAll();
+  }
+  
+  findBook(findValue: string){
 
+    if( findValue.length > 0 )
+    {  
+      let findedBook = this.booksService.getOne(parseFloat(findValue));
+      if( findedBook ){
+        alert("Invocando libro REF : "+ findValue)
+
+        this.localbooks = [];
+        this.localbooks.push(findedBook);
+
+        return;
+      }
+      else
+      {
+        alert("Invocacion de libro fallida, no se ha encontrado : "+ findValue)
+      }
+    }
+    else{
+      alert("Valor de invocacion vacío, reiniciando listado.")
+    }
+
+    this.localbooks = this.booksService.getAll();
+  }
+  
   removeCard(book: Books) {
-    const index = this.books.indexOf(book);
-    if (index !== -1) {
-      this.books.splice(index, 1);
+
+    let Check = this.booksService.delete(book.id_book)
+
+    if(Check === true)
+    {
+      alert('Se ha desterrado este libro con éxito : '+ book.title);
+      this.toast.success('Se ha desterrado este libro con éxito : '+ book.title,"EXITO",{positionClass: 'toast-top-right'});
+      this.localbooks = this.booksService.getAll();
+    }
+    else{
+      this.toast.error("Ha habido un error con el destierro de este libro : "+ book.title,"ERROR",{positionClass: 'toast-top-right'})
     }
   }
 
-  CargarBook(_book: Books) {
-    this.books.push(_book)
-    console.log("Libro añadido correctamente - " + _book.title)
+
+  soloNumeros(event: any) {
+    const input = event.target as HTMLInputElement;
+    const inputValue = input.value;
+
+    // Remover letras y comas del valor del input
+    const newValue = inputValue.replace(/[a-zA-Z,]/g, '');
+    // Actualizar el valor del input sin letras y comas
+    input.value = newValue;
   }
-
 }
-

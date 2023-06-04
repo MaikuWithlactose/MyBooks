@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { FormRegisterComponent } from './component/register/form-register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { BooksComponent } from './pages/books/books.component';
+import { RegisterComponent } from './pages/register/register.component';
 import { CardComponent } from './component/card/card.component';
 import { FormBookComponent } from './component/form-book/form-book.component';
 import { BookCodePipe } from './book-code.pipe';
@@ -19,8 +19,8 @@ import { FormLoginComponent } from './form-login/form-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
-
-
+import { FormRegisterComponent, } from './component/register/form-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import { UpdateBookComponent } from './pages/update-book/update-book.component';
     HeaderComponent,
     FooterComponent,
     FormRegisterComponent,
+    RegisterComponent,
     HomeComponent,
     ProfileComponent,
     BooksComponent,
@@ -38,6 +39,7 @@ import { UpdateBookComponent } from './pages/update-book/update-book.component';
     BookCodePipe,
     LoginComponent,
     FormLoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,7 @@ import { UpdateBookComponent } from './pages/update-book/update-book.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

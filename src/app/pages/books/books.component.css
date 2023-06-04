@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
    
+
 .textoAviso{
     display: flex;
     flex-direction: column;
@@ -61,3 +62,38 @@
 .btn:hover {
   background-color: #5d8a70;
 }
+
+
+
+
+.findBook {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="url"] {
+  width: 500px;
+  padding: 15px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  background-color: #047257;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #013016;
+}
+
+
